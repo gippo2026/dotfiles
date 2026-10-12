@@ -9,6 +9,7 @@ Personal dev environment configuration. Managed with git; deployed via plain cop
 ├── nvim/            # Daily-driver Neovim config (full-stack web, lazy.nvim)
 ├── nvim-general/   # Isolated Python/general Neovim config (NVIM_APPNAME=nvim-general)
 ├── atuin/           # Atuin history config (non-default values only, documented inline)
+├── starship.toml    # Starship prompt (nord palette, $fill two-line layout)
 ├── setup-scripts/   # Shell utilities (concat, git identity, repo-to-AI, node_modules cleaner)
 ├── .bashrc          # Stock Ubuntu skeleton (bash not the daily shell)
 ├── .zshrc           # Daily shell: zinit, mise, starship/zoxide/atuin, aliases
@@ -30,6 +31,7 @@ cd dotfiles
 cp .bashrc ~/.bashrc
 cp .zshrc ~/.zshrc
 cp .tmux.conf ~/.tmux.conf
+cp starship.toml ~/.config/starship.toml
 rsync -a --delete nvim/ ~/.config/nvim/
 rsync -a --delete nvim-general/ ~/.config/nvim-general/
 rsync -a atuin/ ~/.config/atuin/
@@ -44,6 +46,7 @@ before committing. The trailing slash on the source is required, and
 rsync -a --delete ~/.config/nvim/ nvim/
 rsync -a --delete ~/.config/nvim-general/ nvim-general/
 rsync -a ~/.config/atuin/ atuin/
+cp ~/.config/starship.toml starship.toml
 ```
 
 `atuin/` is synced without `--delete`: `config.toml` is the only file, and a future
