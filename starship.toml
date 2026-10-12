@@ -201,7 +201,7 @@ disabled = false
 
 [cmd_duration]
 min_time = 500
-show_milliseconds = true
+show_milliseconds = false
 style = 'fg:gray'
 format = '[$duration]($style) '
 show_notifications = false
