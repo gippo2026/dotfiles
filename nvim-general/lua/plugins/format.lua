@@ -26,7 +26,7 @@ return {
     opts = {
       formatters_by_ft = {
         python = { "ruff_format" },
-        lua = { "stylua" },
+        lua = {}, -- stylua expands your one-line keymaps; Lua formatting stays native/gitsigns-free on purpose
       },
       default_format_opts = { lsp_format = "fallback" },
       format_on_save = function(bufnr)

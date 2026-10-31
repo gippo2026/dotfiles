@@ -7,7 +7,6 @@ return {
       ensure_installed = {
         "basedpyright",
         "ruff",
-        "stylua",
         "tree-sitter-cli",
       },
     },

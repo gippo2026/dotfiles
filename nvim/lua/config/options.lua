@@ -15,7 +15,7 @@ o.breakindent = true
 o.wrap = true
 o.scrolloff = 8
 o.sidescrolloff = 8
-o.startofline = true
+-- 'startofline' intentionally left at the 0.12 default (off): jumps keep your column
 o.linebreak = true
 o.showbreak = "↪ "
 o.smoothscroll = true
@@ -32,6 +32,9 @@ o.updatetime = 200
 o.timeoutlen = 300
 o.ttimeoutlen = 50
 
+o.pumheight = 10
+o.pummaxwidth = 60
+
 o.undofile = true
 o.swapfile = false
 o.backup = false
@@ -40,7 +43,6 @@ o.writebackup = false
 o.mouse = "a"
 o.clipboard = "unnamedplus"
 o.completeopt = { "menu", "menuone", "noselect", "popup" }
-o.pumheight = 10
 o.showmode = false
 o.cmdheight = 1
 o.laststatus = 3
@@ -52,7 +54,7 @@ o.title = true
 o.shortmess:append("IcC")
 o.formatoptions:remove({ "t", "c", "o" })
 
--- folds: window-local method/expr owned by treesitter-modules (fold.enable)
+-- folds: window-local method/expr owned by the treesitter FileType autocmd
 -- keep only global defaults here so oil/help/qf without parser don't get a broken expr
 o.foldlevel = 99
 o.foldlevelstart = 99

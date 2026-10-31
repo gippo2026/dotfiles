@@ -2,7 +2,7 @@ return {
   {
     "stevearc/oil.nvim",
     lazy = false, -- default_file_explorer must be set before the first :edit
-    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    dependencies = { "nvim-mini/mini.icons" },
     ---@module "oil"
     ---@type oil.SetupOpts
     opts = {

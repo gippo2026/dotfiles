@@ -43,3 +43,19 @@ autocmd("LspAttach", {
     map("<leader>cd", vim.diagnostic.open_float, "Diagnostics")
   end,
 })
+
+local tag_enter_grp = augroup("TagEnter", { clear = true })
+autocmd("FileType", {
+  group = tag_enter_grp,
+  pattern = { "typescriptreact", "javascriptreact", "html" },
+  callback = function(ev)
+    vim.keymap.set("i", "<CR>", function()
+      local col = vim.fn.col(".")
+      local line = vim.fn.getline(".")
+      if line:sub(col - 1, col - 1) == ">" and line:sub(col, col) == "<" then
+        return "<CR><C-o>O"
+      end
+      return require("mini.pairs").cr()
+    end, { expr = true, buffer = ev.buf })
+  end,
+})

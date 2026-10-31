@@ -6,7 +6,6 @@ return {
     opts = {
       ensure_installed = {
         "prettierd",
-        "stylua",
         "tree-sitter-cli",
         "sqlfmt",
         "shfmt",

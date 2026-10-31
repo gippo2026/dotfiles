@@ -15,7 +15,7 @@ o.breakindent = true
 o.wrap = true
 o.scrolloff = 8
 o.sidescrolloff = 8
-o.startofline = true
+-- 'startofline' intentionally left at the 0.12 default (off): jumps keep your column
 o.linebreak = true
 o.showbreak = "↪ "
 o.smoothscroll = true
@@ -41,6 +41,7 @@ o.mouse = "a"
 o.clipboard = "unnamedplus"
 o.completeopt = { "menu", "menuone", "noselect", "popup" }
 o.pumheight = 10
+o.pummaxwidth = 60
 o.showmode = false
 o.cmdheight = 1
 o.laststatus = 3
@@ -58,7 +59,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
--- folds: window-local method/expr owned by treesitter-modules (fold.enable)
+-- folds: window-local method/expr owned by the treesitter FileType autocmd
 -- keep only global defaults here so oil/help/qf without parser don't get a broken expr
 o.foldlevel = 99
 o.foldlevelstart = 99

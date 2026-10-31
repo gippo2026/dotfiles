@@ -35,7 +35,7 @@ return {
         html = { "prettierd", "prettier", stop_after_first = true },
         yaml = { "prettierd", "prettier", stop_after_first = true },
         markdown = { "prettierd", "prettier", stop_after_first = true },
-        lua = { "stylua" },
+        lua = {}, -- stylua expands your one-line keymaps; Lua formatting stays native/gitsigns-free on purpose
         sql = { "sqlfmt" },
         sh = { "shfmt" },
         bash = { "shfmt" },

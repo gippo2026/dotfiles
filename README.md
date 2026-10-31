@@ -59,7 +59,9 @@ Do not use `cp -r ~/.config/nvim nvim` here. `nvim/` already exists, so
 
 Full-stack web config. Minimalist `lazy.nvim` setup: `init.lua` loads
 `config/{options,lazy,keymaps,autocmds}`, one concern per file under `lua/plugins/`.
-`lazy-lock.json` pins plugin versions. `stylua.toml` (`Spaces/2`) governs Lua formatting.
+`lazy-lock.json` pins plugin versions. Treesitter highlight/indent/folds run
+natively through nvim 0.12 (`nvim-treesitter` main branch is parser manager only);
+Lua styling is hand-maintained — no stylua.
 
 ```
 nvim
@@ -78,7 +80,8 @@ alias vig='NVIM_APPNAME=nvim-general nvim'
 ```
 
 First launch installs plugins (`lazy.nvim`) and tools (`mason`: `basedpyright`,
-`ruff`, `debugpy`, `stylua`, `tree-sitter-cli`).
+`ruff`, `debugpy`, `tree-sitter-cli`; node selection uses nvim 0.12's native
+`an`/`in`/`]N`/`[N`, no treesitter-modules).
 
 ## setup-scripts
 
